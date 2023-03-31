@@ -1,0 +1,106 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700;800&display=swap');
+
+:root {
+    --ff-primary: 'Inter', sans-serif;
+
+    --soft-orange: hsl(35,77%, 62%);
+    --soft-red: hsl(5,85%, 63%);
+
+    --off-white: hsl(36,100%, 99%);
+    --grayish-blue: hsl(233,8%, 79%);
+    --dark-grayish-blue: hsl(236,13%, 42%);
+    --very-dark-blue: hsl(240,100%, 5%);
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5;
+}
+
+
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+font-family: var(--ff-primary);
+  margin: 1rem;
+}
+
+ 
+  /* Set core root defaults */
+  html:focus-within {
+    scroll-behavior: smooth;
+  }
+  
+  /* Set core body defaults */
+  body {
+    min-height: 100vh;
+    text-rendering: optimizeSpeed;
+    line-height: 1.5;
+    font-family: var(--ff-primary);
+  }
+
+   /* A elements that don't have a class get default styles */
+   a:not([class]) {
+    text-decoration-skip-ink: auto;
+  }
+  
+  /* Make images easier to work with */
+  img,
+  picture {
+    max-width: 100%;
+    display: block;
+  }
+  
+  /* Inherit fonts for inputs and buttons */
+  input,
+  button,
+  textarea,
+  select {
+    font: inherit;
+  }
+  
+  /* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+  @media (prefers-reduced-motion: reduce) {
+    html:focus-within {
+      scroll-behavior: auto;
+    }
+  
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+      scroll-behavior: auto !important;
+    }
+  }
+  
+
+/* Navigations */
+
+nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    margin: 0 auto ;
+    max-width: 1200px;
+}
+
+nav a {
+    text-decoration: none;
+    color: var(--dark-grayish-blue);
+    margin:0 1rem;
+}
